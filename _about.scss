@@ -1,0 +1,32 @@
+@import 'colors';
+@import 'media-query';
+
+.about-image{
+    background-image: url('img/workers.jpg');
+    background-size: cover;
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    height: 50vh;
+    animation: fadeIn 0.5s ease-in;
+}
+.uvod{
+    color: $blue;
+    width: 85%;
+    margin: auto;
+    padding: 3rem 0;
+}
+.uvod h1{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    @include fold{
+        font-size: 1.3rem;
+    }
+}
+.uvod p{
+    margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }

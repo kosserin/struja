@@ -1,0 +1,320 @@
+@import 'colors';
+@import 'media-query';
+@import 'about';
+
+.prezentacija{
+    position: relative;
+    overflow: hidden;
+    height: 85vh;
+    width: 100vw;
+
+}
+.slajd{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slajd .sadrzaj{
+    position: absolute;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.4);
+    color: $blue;
+    padding: 35px;
+
+    transition: all .3s ease-in-out .3s;
+    z-index: 10; 
+    text-align: center;
+    @include tablet{
+        width: 100%;
+        bottom: 20%;
+    }
+    @include phone{
+        padding: 20px;
+    }
+}
+.slajd .sadrzaj a{
+    display: inline-block;
+    cursor: pointer;
+    background-color: $blue;
+    color: $white;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    transition: all .2s ease;
+    &:hover{
+        background-color: $yellow;
+        color: $blue;
+    }
+    @include phone{
+        font-size: 13px;
+    }
+}
+
+
+.slajd .sadrzaj h1{
+    margin-bottom: 10px;
+    @include tablet{
+        font-size: 1rem;
+    }
+}
+.trenutni .sadrzaj{
+    opacity: 1;
+}
+.slajd.trenutni{
+    opacity: 1;
+}
+button#next{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+}
+button#prev{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+}
+.buttons button{
+    border: 2px solid $white;
+    background-color: transparent;
+    color: $white;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;
+    transition: all .3s ease;
+    &:hover{
+        background-color: $white;
+        color: $blue;
+    }
+} 
+.slajd{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slajd:first-child{
+    background: url('./slides/1\ \(1\).jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slajd::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    width: 100vw;
+}
+.slajd:nth-child(2){
+    background: url('./slides/2\ \(1\).jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slajd:nth-child(3){
+    background: url('./slides/3\ \(1\).jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slajd:nth-child(4){
+    background: url('./slides/pexels-pixabay-257736\ \(1\).jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slajd:nth-child(5){
+    background: url('./slides/2\ \(1\).jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.link{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    bottom: 30px;
+    align-items: center;
+    width: 100%;
+    & a{
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 1rem;
+        color: $blue;
+        display: flex;
+        flex-direction: column;
+        &:hover i{
+            color: $yellow;
+            text-shadow: none;
+        }
+    }
+}
+.link a i{
+    font-size: 2rem;
+}
+
+.slicice{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    grid-gap: 10px;
+    margin-top: 50px;
+    @include mini{
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 30px;
+    }
+}
+.slicice .slicica img{
+    width: 80px;
+    @include phone{
+        width: 60px;
+    }
+}
+.slicica{
+    color: $blue;
+    text-align: center;
+}
+.slicica h1{
+    font-size: 1.3rem;
+    @include phone{
+        font-size: 1rem;
+    }
+}
+.slicica p{
+    @include phone{
+        font-size: 13px;
+    }
+}
+
+/*TEXT SECTION*/
+
+.text-container{
+    background-color: $white;
+
+}
+.text{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    color: $blue;
+}
+.text h1{
+    @include phone{
+        font-size: 1.5rem;
+    }
+}
+.text p{
+    margin-top: 30px;
+    @include phone{
+        font-size: 13px;
+    }
+}
+.text a{
+    position: relative;
+    @include phone{
+        font-size: 15px;
+    }
+}
+.read{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+}
+.read a:hover img{
+    transform: translateX(10px);
+    transition: transform 0.3s ease-in;
+    text-decoration: none;
+}
+.read a{
+text-decoration: none;
+color: $blue;
+&:hover{
+    text-decoration: underline;
+}
+}
+.read a img{
+    position: relative;
+    top:7px;
+}
+ 
+/*COMMENTS SECTION*/
+.comments-container{
+    padding: 0rem 0 5rem 0;
+}
+.comments h1 {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+.comments  h1:before,
+.comments  h1:after {
+    background-color: rgb(202, 202, 202);
+    content: "";
+    display: inline-block;
+    height: 1.5px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+  
+ .comments h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+  
+.comments  h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+  .comments img{
+      width: 60px;
+      transform: translateY(15px);
+      @include tablet{
+        width: 50px;
+    }
+      @include phone{
+        width: 40px;
+    }
+  }
+  .comments .comment{
+      width: 80%;
+      margin: auto;
+      font-size: 2rem;
+      font-weight: 200;
+      text-align: center;
+      padding:3rem 0;
+      @include tablet{
+          font-size: 1.3rem;
+          padding: 1.5rem;
+      }
+      @include phone{
+        font-size: 1.1rem;
+    }
+    @include fold{
+        font-size: 0.9rem;
+    }
+  }
+  .comments .author{
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: $blue;
+      @include phone{
+          font-size: 1.1rem;
+      }
+  }

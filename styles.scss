@@ -1,0 +1,30 @@
+@import 'nav';
+@import 'footer';
+@import 'main';
+@import 'kontakt';
+@import 'about';
+
+@import 'services';
+
+@import 'colors';
+@import 'media-query';
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: $white;
+    overflow-x: hidden;
+    height: fit-content;
+}
+html,
+body {
+    
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}

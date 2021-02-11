@@ -1,0 +1,102 @@
+@import 'colors';
+@import 'media-query';
+@import 'about';
+
+.contact-map{
+    width: 80%;
+    margin: auto;
+}
+.map{
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include tablet{
+        flex-direction: column;
+    }
+}
+.map-text{
+width: 35%;
+height: 100%;
+animation: fadeIn 1s ease-in;
+color: $blue;
+@include tablet{
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+}
+
+.map-image{
+    width: 65%;
+    animation: fadeIn 0.5s ease-in;
+    @include tablet{
+        width: 100%;
+    }
+    & iframe{
+        width: 90%;
+        @include tablet{
+            width: 100%;
+        }
+    }
+}
+
+/*FORMA*/
+
+.forma{
+    padding: 4rem 0 5rem 0;
+    width: 100%;
+    text-align: center;
+    background-color: $yellow;
+    color: $blue;
+}
+.forma h1{
+    padding-bottom: 2rem;
+    width: 80%;
+    margin: auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+    @include phone{
+        width: 300px;
+    }
+}
+form label{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.forma form input[type=text],.forma form input[type=email]{
+    border: none;
+    border-radius: 0;
+    height: 40px;
+    background-color: $white;
+    padding-left: 1rem;
+}
+.forma form textarea{
+    border: none;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    border-radius: 0;
+}
+.forma form input[type=submit]{
+    margin-top: 2rem;
+    border: none;
+    outline: none;
+    background-color: $blue;
+    color: $white;
+    height: 50px;
+    cursor: pointer;
+    width: 400px;
+    @include phone{
+        width: 300px;
+    }
+    &:hover{
+        background-color: #0e0a7e;
+}
+}
+.map-text span{
+    font-weight: 600;
+}

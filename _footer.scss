@@ -1,0 +1,89 @@
+@import 'colors';
+@import 'media-query';
+footer{
+    background-color: $blue;
+    padding: 5rem 0 1rem;
+    color: $yellow;
+    @include tablet{
+        padding: 1rem 0;
+    }
+}
+.footer-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    @include mini{
+flex-direction: column;
+       align-items: center;
+       text-align: center;
+    }
+}
+.info img{
+    width: 25px;
+    @include tablet{
+        width: 20px;
+    }
+}
+.info p{
+    @include phone{
+        font-size: 12px;
+    }
+}
+.contact a{
+    color: $yellow;
+    text-decoration: none;
+    font-size: 3rem;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.contact{
+    @include mini{
+        margin-bottom: 40px;
+    }
+}
+.contact img{
+    transform: translate(-5px,+5px);
+}
+
+.social{
+    display: flex;
+} 
+.social h1{
+    @include tablet{
+        font-size: 1rem;
+    }
+}
+.social img{
+    transform: translate(10px,-15px);
+    opacity: 0.5;
+    width: 80px;
+    @include tablet{
+        width: 60px;
+    }
+    @include phone{
+        width: 50px;
+    }
+    &:hover{
+        opacity: 1;
+    }
+}
+/*COPYRIGHT SECTION*/
+.copyright{
+    width: 80%;
+    margin: auto;
+    border-top: 2px solid gray;
+    text-align: center;
+    padding-top: 1rem;
+}
+.design{
+    text-align: center;
+    & a{
+        color: $white;
+    }
+}
+.info:last-of-type{
+    font-size: 15px;
+}
