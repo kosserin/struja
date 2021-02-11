@@ -571,6 +571,7 @@ footer {
   .slajd .sadrzaj {
     width: 100%;
     bottom: 20%;
+    left: -400px;
   }
 }
 
@@ -615,6 +616,12 @@ footer {
 
 .trenutni .sadrzaj {
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .trenutni .sadrzaj {
+    left: 0;
+  }
 }
 
 .slajd.trenutni {
@@ -734,6 +741,18 @@ button#prev {
 .link a:hover i {
   color: #fcf700;
   text-shadow: none;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-transition: -webkit-transform .8s ease;
+  transition: -webkit-transform .8s ease;
+  transition: transform .8s ease;
+  transition: transform .8s ease, -webkit-transform .8s ease;
+}
+
+@media screen and (max-width: 600px) {
+  .link a {
+    font-size: 13px;
+  }
 }
 
 .link a i {
