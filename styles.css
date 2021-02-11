@@ -578,6 +578,7 @@ footer {
 @media screen and (max-width: 600px) {
   .slajd .sadrzaj {
     padding: 20px;
+    bottom: 25%;
   }
 }
 
